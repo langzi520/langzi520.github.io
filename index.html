@@ -1,17 +1,16 @@
-﻿<!DOCTYPE HTML>
-<!-- saved from url=(0036)http://www.webhek.com/misc/3d-album/ -->
+<!DOCTYPE HTML>
 <!DOCTYPE html PUBLIC "" "">
 <HTML>
 <HEAD>
 <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
-<meta name="Author" content="upload Author http://www.shizaishi.com/"> 
+<meta name="Author" content="upload Author qu"> 
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="true"> 
 <meta name="keywords" content="canvas,3D,perspective,texturing,gallery"> 
 <link href="res/slider-wb.css" rel="stylesheet">
-<title>浪子的礼物</title> 
+<title>她的刘先生</title> 
 <style>
 html {
 	overflow: hidden;
@@ -431,14 +430,45 @@ body {
             } })(window, document);
 
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head> 
 <body>
+	<script>
+	function getOffsetDays(time1, time2) {
+	
+		var offsetTime = (time1 - time2);
+		return Math.floor(offsetTime / (3600 * 24 * 1e3));
+	}
+		var today=new Date();
+		var y = today.getFullYear()
+		var m = today.getMonth()
+		var d = today.getDate()
+		var du = getOffsetDays(Date.now(), (new Date(2018, 1, 5)).getTime())
+		var anu = y - 2018
+		var loves = ["汪女士 ！余生请多指教。    --爱你的刘先生","只要你记得我，我不介意整个世界都把我遗忘了。","我爱你，不光因为你的样子，还因为和你在一起时我的样子；我爱你，不光因为你为我而做的事，还因为为了你我能做成的事；我爱你，因为你能唤出我最真的那部分，我心里最美丽的地方被你的光芒照得通亮。",
+		"有些路很远，走下去会很累。可是，不走，会后悔。","有一天，我们一起起床，一起刷牙，一起拉着手出家门。一起遛狗，一起散步，一起为了争电视斗智斗勇。一起买菜，一起做饭，一起为了几毛钱在菜市场咆哮。这一天来了。",
+		"对于世界而言，你是一个人；但是对于我而言，你是我的整个世界。","我还记得第一次看到你的场景，那时的我并没想到现在你对我是那么重要。 --汪女士的刘先生","我今生最大的奢望就是:天天和你在同个盆里洗脚.平淡相守到老–老到我们哪也去不了.",
+		"当岁月老去，我依然记得曾经夕阳下我们美好的誓言！","世界很大，难得遇见你，我愿永远这样高调的爱着你。","我从不听情话，可对我而言，你说的每一句都是情话。",
+		"和你在一起，我从来没有羡慕过任何人。","我不需要你是个盖世英雄，我也不希望你有举世无双的功夫，更不用你脚踏七彩祥云，只愿你是我一个人的齐天大圣。 --刘先生的汪女士",
+		"我喜欢的样子，你都有。   《甜甜的》--周杰伦   ","过去有人曾对我说，“一个人爱上小溪，是因为没有见过大海。”而如今我终于可以说，“我已见过银河，但我仍只爱你一颗星。","你给我听着，我爱你——记好了啊！ --Mr. Liu"];
+	function sendNum(arr)
+	{
+			return arr[Math.floor(Math.random()*arr.length)];
+	}
+	var msg = sendNum(loves);
+		if(m+1 == 2 && d == 5){
+			swal("结婚"+anu+"周年快乐"+'\n'+msg)
+		}else{
+			swal("我们结婚了"+du+"天"+"\n"+msg)
+		}
+	
+	</script>
 	<CANVAS id="canvas">你的浏览器不支持HTML5画布技术，请使用谷歌浏览器。</CANVAS> <!-- dhteumeuleu nav menu --> 
 	<script src="res/jquery-1.7.2.min.js"></script>
 	<audio autoplay="autoplay" height="100" width="100" loop="loop">
   	<source src="imgs/gaobai.mp3" type="audio/mp3" />
   	<source src="imgs/gaobai.ogg" type="audio/ogg" />
-  	<embed height="100" width="100" src="imgs/gaobai.mp3" />
+	  <embed height="100" width="100" src="imgs/gaobai.mp3" />
 </audio>
 </body>
 </html>
